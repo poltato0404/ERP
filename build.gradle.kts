@@ -26,11 +26,14 @@ dependencies {
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.flywaydb:flyway-sqlserver")
 	implementation("org.springframework.session:spring-session-core")
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	compileOnly("org.projectlombok:lombok:1.18.38")
+	annotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
 tasks.withType<Test> {

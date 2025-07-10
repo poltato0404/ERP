@@ -1,11 +1,12 @@
 package com.example.Portfolio.controller;
+
 import com.example.Portfolio.model.Book;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/api/books")
 public class BookController {
 
     private final Map<Long, Book> bookStore = new HashMap<>();
@@ -17,8 +18,8 @@ public class BookController {
     // }
 
     @GetMapping
-    public String testEndpoint() {
-        return "bish endpoint is working!";
+    public Map<String, String> testJson() {
+        return Map.of("message", "bish endpoint is working!");
     }
 
     @GetMapping("/{id}")
